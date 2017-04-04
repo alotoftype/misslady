@@ -15,7 +15,7 @@ var browserSyncWatchFiles = [
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
-    proxy: "localhost/understrap/",
+    proxy: "localhost",
     notify: false
 };
 
@@ -77,7 +77,7 @@ gulp.task('scss-for-dev', function() {
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch-scss', ['browser-sync'], function () {
