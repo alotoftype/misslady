@@ -1,16 +1,124 @@
+html {
+  height: 100%;
+}
+ body {
+  font-family: $open-sans;
+  font-size: $base-size;
+  line-height: 1.9;
+  color: $grey;
+  height: 100%;
+  margin:0;
+
+}
+
+
 article {
   font-family: $open-sans;
+  padding: 3rem 0;
 }
 a.navbar-brand.logo {
   font-family: $pinyon;
   color: $brand-primary;
 }
 
-main {
+ a.nav-link  {
+  font-family: $open-sans !important;
+   color: rgba( $white, .6);
+   a.nav-link:hover {
+     text-decoration: underline;
+     color: rgba($white, 1);
+   }
+}
+
 
   section {
-    @include make-row();
+    //@include make-row();
+    min-height: 300px;
+    display: block;
+    box-sizing: border-box;
+    &.header {
+      background: $red;
+      height: 70vh;
+    }
+    & .owl-s {
+      min-height: 300px;
+      height: 70vh;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+    }
+
+    & .carousel-text {
+    position: relative;
+    top: 40vh;
+    right: 50vw;
+    font-size: 3rem;
+    color: white;
+    box-shadow: aquamarine;
+  }
+    h2{
+      @extend .text-center;
+      @extend .text-uppercase;
+      padding: 20px 0;
+      .logo {
+        color: $brand-primary;
+        font-family:$pinyon;
+        text-transform: none;
+        @include font-size(20px);
+      }
+      @include font-size(20px);
+    }
+    &.about {
+      padding: 3rem 0;
+      .about-image{
+       padding: 3rem 0;
+      }
+    }
+    &.testimonials {
+      background: tint($grey, 70%);
+      min-height: 150px;
+      height: 150px;
+      border-bottom: 1px solid $red;
+    }
+    &.news {
+      & p {
+        padding: 3rem;
+
+      }
+    }
+    &.contact {
+      background: tint($grey, 60%);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      & h2{
+        padding: 10px 0;
+      }
+    }
+
   }
 
 
+
+ #gform_wrapper_1 {
+   display: block;
+   width:75%;
+   margin: 0 30%;
+ }
+footer {
+  position: relative;
+  clear: both;
+  height: 20vh;
+  background: $grey;
+  & p {
+    color:$white;
+    padding: 2%;
+  }
+}
+.name {
+  color: $red;
+  &::before {
+    content: "- ";
+  }
 }

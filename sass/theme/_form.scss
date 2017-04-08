@@ -1,0 +1,59 @@
+//--------------------------------------------------------------
+// LOCAL VARIABLES
+//-------------------------------------------------------------------
+
+// Form
+$gf-padding: 0; // set outer padding on form
+$gf-bg: $white; // background color of form
+$gf-border-width: 0; // border-width on form
+$gf-border-color: $white; // border color
+
+// Fields / Rows
+$gf-field-margin-bottom: 25/16rem; // margin between field and label below (vertical spacing between rows)
+
+// Labels
+$gf-label-font-size: 16px;
+$gf-label-font-color: $grey;
+$gf-label-font-weight: 700;
+
+// Inputs
+$gf-input-color-background: $white;
+$gf-input-color-border: $white;
+$gf-input-color-text: $grey;
+$gf-input-color-focus-text: $grey;
+$gf-input-padding: 20px;
+
+
+
+ .gr_bs_form_wrapper {
+  margin-right: 0; // allow for full width of containing element
+  max-width: 100%; // allow for full width of containing element
+
+  // Standard fields
+  input[type="text"],
+  input[type="url"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"],
+  input[type="file"],
+  textarea{
+    padding: $gf-input-padding;
+    width: 100%;
+    border: 1px solid rgba($red, .5);
+    background: $gf-input-color-background;
+    color: $grey/70%;
+
+
+
+
+  }
+}
+
+input#gform_submit_button_1 {
+  width: 52%;
+  background: $red;
+  box-shadow: none;
+  border: none;
+  color: $white;
+}

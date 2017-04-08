@@ -8,7 +8,23 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Pinyon+Script');
 
 
+$red: rgb(255,0,0);
+$grey: rgb(74,74,74);
+$white: rgb(255,255,255);
+
 
 $brand-primary:         rgb(255,0,0);
 $pinyon:                'Pinyon Script', cursive;
 $open-sans:             'Open Sans', sans-serif;
+$base-size:              16px;
+
+
+
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
